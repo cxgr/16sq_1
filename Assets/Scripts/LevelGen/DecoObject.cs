@@ -26,6 +26,8 @@ public class DecoObject : MonoBehaviour
 #if UNITY_EDITOR
 	void OnDrawGizmos()
 	{
+		if (!Globals.drawGizmos) return;
+		
 		Gizmos.color = Color.red;
 		if (null != boundingBox)
 		{

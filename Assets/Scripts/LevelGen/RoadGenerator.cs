@@ -49,6 +49,8 @@ public class RoadGenerator : GeneratorBase
 #if UNITY_EDITOR
 	void OnDrawGizmos()
 	{
+		if (!Globals.drawGizmos) return;
+		
 		Gizmos.color = Color.red;
 		Gizmos.DrawSphere(Vector3.forward * nextRoadCycleZ, 1f);
 	}
