@@ -25,6 +25,12 @@ public class HUD : MonoBehaviour
 		
 		if (null == fadeCG)
 			fadeCG = GetComponentInChildren<CanvasGroup>();
+		
+		GetComponentInChildren<Toggle>().onValueChanged.AddListener((val) =>
+		{
+			RenderSettings.fog = val;
+			QualitySettings.shadows = val ? ShadowQuality.All : ShadowQuality.Disable;
+		});
 	}
 	
 	IEnumerator Start()
@@ -55,5 +61,10 @@ public class HUD : MonoBehaviour
 	public void UpdateSpeedTxt(float newVal)
 	{
 		txtSpeed.text = "SPEED " + newVal.ToString("0.000");
+	}
+	
+	public void ToggleFog(bool on)
+	{
+		RenderSettings.fog = false;
 	}
 }
