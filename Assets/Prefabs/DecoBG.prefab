@@ -346,4 +346,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boundingBox: {fileID: 65285822837081952}
   decoType: 0
-  scaleRandomRange: {x: 1, y: 1}
+  scaleRandomRange: {x: 0.6, y: 1.2}
