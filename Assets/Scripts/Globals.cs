@@ -4,5 +4,5 @@ using UnityEngine;
 
 public static class Globals
 {
-	public static bool drawGizmos = false;
+	public static bool drawGizmos = true;
 }
